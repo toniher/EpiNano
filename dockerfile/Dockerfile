@@ -20,7 +20,14 @@ COPY models/ /opt/epinano/models/
 #COPY Reference_sequences/ /opt/epinano/Reference_sequences/
 #COPY test_data /opt/epinano/test_data/
 
-RUN chmod a+rx *py *sh *R
-ENV PATH="$PATH:/opt/epinano"
-USER mambauser
+# Workaround to make it work with Apptainer/Singularity
+RUN unlink /opt/conda/bin/python
+RUN echo "micromamba run -n base /opt/conda/bin/python3.11 \"\$@\"" > /opt/conda/bin/python
+RUN mv /opt/conda/bin/Rscript /opt/conda/bin/Rscript.orig
+RUN echo "micromamba run -n base /opt/conda/bin/Rscript.orig \"\$@\"" > /opt/conda/bin/Rscript
 
+RUN chmod a+rx *py *sh *R
+RUN chmod a+rx /opt/conda/bin/python /opt/conda/bin/Rscript
+
+USER mambauser
+ENV PATH="$PATH:/opt/epinano:/opt/conda/bin"
