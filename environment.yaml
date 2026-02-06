@@ -3,18 +3,18 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
-  - openjdk
-  - minimap2=2.*
-  - samtools=1.*
-  - python
-  - h5py
-  - numpy=1.*
-  - pandas=1.*
-  - scikit-learn=1.*
-  - dask
-  - biopython=1.*
-  - pysam=0.*
-  - r-base
+  - openjdk=25.0.*
+  - minimap2=2.30
+  - samtools=1.22.1
+  - python=3.11.*
+  - h5py=3.15.*
+  - numpy=1.26.*
+  - pandas=1.5.*
+  - scikit-learn=1.8.*
+  - dask=2024.2.1
+  - biopython=1.86
+  - pysam=0.23.3
+  - r-base=4.5.*
   - r-forcats
   - r-optparse
   - r-stringr
@@ -23,11 +23,11 @@ dependencies:
   - r-readr
   - r-tidyr
   - r-tibble
-  - r-tidyverse
+  - r-tidyverse=2.*
   - r-ggrepel
   - r-car
-  - r-ggplot2
+  - r-ggplot2=4.0.*
   - r-reshape2
   - r-outliers
-  - nanopolish
-  - jvarkit
+  - nanopolish=0.4.0
+  - jvarkit=2024.08.25
