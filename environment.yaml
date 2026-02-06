@@ -1,0 +1,33 @@
+name: epinano
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - openjdk
+  - minimap2=2.*
+  - samtools=1.*
+  - python
+  - h5py
+  - numpy=1.*
+  - pandas=1.*
+  - scikit-learn=1.*
+  - dask
+  - biopython=1.*
+  - pysam=0.*
+  - r-base
+  - r-forcats
+  - r-optparse
+  - r-stringr
+  - r-dplyr
+  - r-purrr
+  - r-readr
+  - r-tidyr
+  - r-tibble
+  - r-tidyverse
+  - r-ggrepel
+  - r-car
+  - r-ggplot2
+  - r-reshape2
+  - r-outliers
+  - nanopolish
+  - jvarkit
