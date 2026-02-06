@@ -29,7 +29,7 @@ Detection of RNA modifications from Oxford Nanopore direct RNA sequencing reads
 
 *EpiNano-SVM* can be run using either pre-trained models for a given RNA modification, or by building your own models. However, we should note that using a matched control (e.g. KO or KD) is still highly recommended, due to the noisy nature of direct RNA sequencing reads, which are 'error'-rich. Moreover, in addition to SVM models trained with "raw" base-calling 'error' features (same as in EpiNano 1.0 and 1.1), in EpiNano 1.2 we now provide SVM models trained with features that capture differences between samples (i.e. difference in mismatch, rather than absolute mismatch frequency), which we find have improved performance. 
 
-**EpiNano 1.1** - a slimmer version of version 1.0, written in python3 is available [here](https://github.com/enovoa/EpiNano/releases).  
+**EpiNano 1.1** - a slimmer version of version 1.0, written in python3 is available [here](https://github.com/novoalab/EpiNano/releases).  
 * This version is the one currently implemented in [MasterOfPores](https://www.frontiersin.org/articles/10.3389/fgene.2020.00211), a workflow to analyze direct RNA sequencing data. 
 
 * The major differences with EpiNano 1.0 are (i) it is faster (ii) Uses python3 instead of python2 (iii) Does not extract current intensity in the feature table, as this feature was not used to train the final models. 
@@ -40,7 +40,7 @@ Detection of RNA modifications from Oxford Nanopore direct RNA sequencing reads
 
 * Regardless of the basecallers used, EpiNano can be used as a toolkit to extract per k-mer base-calling 'errors' (mismatch, insertion, deletion, quality), which are a proxy of RNA modifications present in a given dataset. We recommend running EpiNano in paired mode, i.e. computing the features in two datasets (WT-KO) to then accurately predict the RNA modified sites (i.e. those showing largest differences in their base-calling 'error' features). 
 
-**EpiNano 1.0** - original code used in [Liu, Begik et al., Nature Comm 2019](https://www.nature.com/articles/s41467-019-11713-9), which is available [here](https://github.com/enovoa/EpiNano/releases).  
+**EpiNano 1.0** - original code used in [Liu, Begik et al., Nature Comm 2019](https://www.nature.com/articles/s41467-019-11713-9), which is available [here](https://github.com/novoalab/EpiNano/releases).  
 
 * Includes pre-trained m6A models base-called with *Albacore* version 2.1.7. 
 
@@ -103,9 +103,9 @@ In EpiNano 1.2, we introduce delta-features, features capturing difference betwe
 
 To download the latest version of EpiNano , you just need to clone the repo: 
 
-```  git clone git@github.com:enovoa/EpiNano.git ```  
+```  git clone git@github.com:novoalab/EpiNano.git ```  
 
-You can also find the last tagged releases [HERE](https://github.com/enovoa/EpiNano/releases)  
+You can also find the last tagged releases [HERE](https://github.com/novoalab/EpiNano/releases)  
 
 The easier way to install the program is to use either a Conda environment or a Docker container.
 
@@ -127,7 +127,7 @@ To train models and assess prediction accuracies, please refer to commands in te
 
 To make predictions with pre-trained models, please refer to commands in /test_data/make_predictions. 
 
-We will also update in [wiki]([https://github.com/enovoa/EpiNano/wiki/EpiNano-wiki](https://github.com/enovoa/EpiNano/wiki/EpiNano-wiki)) with specific examples of using different Epinano components.
+We will also update in [wiki]([https://github.com/novoalab/EpiNano/wiki/EpiNano-wiki](https://github.com/novoalab/EpiNano/wiki/EpiNano-wiki)) with specific examples of using different Epinano components.
 
 Below is a simple introduction of programs' usage information. 
 
@@ -331,7 +331,7 @@ python $EPINANO_HOME/Epinano_Predict.py
 
 * Build feature table (on which predictions will be made)
 
-    For step-by-step instructions to build a feature table, please take a look at the [Wiki](https://github.com/enovoa/EpiNano/wiki)
+    For step-by-step instructions to build a feature table, please take a look at the [Wiki](https://github.com/novoalab/EpiNano/wiki)
 
 * To train SVM and perform predictions:
 ```
@@ -416,7 +416,7 @@ Link to paper: https://www.nature.com/articles/s41467-019-11713-9
 See LICENSE.md for details
 
 ## Contact
-Please read the [Wiki](https://github.com/enovoa/EpiNano/wiki) before opening an issue. Also, please go over other [issues](https://github.com/enovoa/EpiNano/issues) that may have been previously resolved (check out "closed" issues).
+Please read the [Wiki](https://github.com/novoalab/EpiNano/wiki) before opening an issue. Also, please go over other [issues](https://github.com/novoalab/EpiNano/issues) that may have been previously resolved (check out "closed" issues).
 If you still have doubts/concerns/suggestions, please open a new Issue.
 Thanks!
 
